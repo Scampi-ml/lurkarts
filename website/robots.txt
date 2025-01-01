@@ -18,9 +18,7 @@
 
 
 User-agent: *
-
-Disallow: /raffels/detail/
-
+Disallow: /
 Sitemap: https://lurkarts.scampi.me/sitemap.xml
 
 #              ________
