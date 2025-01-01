@@ -1,0 +1,14 @@
+SetEnv CI_ENV production
+
+# Disable directory browsing
+Options All -Indexes
+Options -Multiviews
+Options +FollowSymLinks
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?/$1 [L,NC,QSA]
+
+# Disable directory browsing for assets
+RedirectMatch 403 ^/assets/?$
